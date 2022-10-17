@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date And Time</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background: linear-gradient(145deg, lightsalmon, lightskyblue);
+        height: 100vh;
+        text-align: center;
+        justify-content: center;
+    }
+    h2 {
+        margin-top: 10%;
+        font-size: 40px;
+        font-weight: 900;
+        color: #000;
+    }
+    button {
+        width: 250px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 20px;
+        background: lightpink;
+        color: #000;
+        border: 3px solid #000;
+        border-radius: 10px;
+    }
+    button:hover {
+        color: #fff;
+        background: lightcoral;
+        border: 3px solid #fff;
+        border-radius: 20px;
+    }
+    p {
+        margin-top: 30px;
+        color: #000;
+        font-size: 20px;
+        font-weight: 700;
+    }
+</style>
+<body>
+    <h2>Date And Time</h2>
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+    Click Here For Date and Time</button>
+    
+    <p id="demo"></p>    
+</body>
+</html>

@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(145deg, lightsalmon, lightskyblue);
+    min-height: 100vh;
+}
+.clock {
+    width: 450px;
+    height: 150px;
+    display: flex;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 14.5rem auto;
+    background: rgb(218, 13, 74);
+}
+.clock div {
+    height: 100px;
+    width: 150px;
+    display: flex;
+    font-size: 50px;
+    background: #fff;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 15px 30px rgba(0, 0. 0, 0.3);
+}
+.clock span {
+    color: #fff;
+    padding: 5px;
+    font-size: 50px;
+    margin-top: 10px;
+    font-weight: bolder;
+}

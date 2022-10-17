@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>SLIDER</title>
+
+        
+        <link rel = "stylesheet" type = "text/css" href = "CSS/SLIDER.css">
+        <script src="https://kit.fontawesome.com/ec8ab4f226.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        <div class="content">
+            <div class="image">
+                <img src="IMG/B1.jpg" alt="">
+                <img src="IMG/BI1.jpg" alt="">
+                <img src="IMG/F1.jpg" alt="">
+                <img src="IMG/FI1.jpg" alt="">
+                <img src="IMG/N1.jpg" alt="">
+            </div>
+            <div onclick="slide_slide(-1)" class="slide left">
+                <span class="fas fa-angle-left"></span>
+
+            </div>
+
+            <div onclick="slide_slide(1)" class="slide right">
+                <span class="fas fa-angle-right"></span>
+
+            </div>
+
+
+            <div class="btm-sliders">
+                <span onclick="btm_slide(1)"></span>
+                <span onclick="btm_slide(2)"></span>
+                <span onclick="btm_slide(3)"></span>
+                <span onclick="btm_slide(4)"></span>
+                <span onclick="btm_slide(5)"></span>
+            </div>
+        </div>
+
+        <script src="JS/SLIDER.js"></script>
+    </body>
+</html>

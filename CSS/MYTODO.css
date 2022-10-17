@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(145deg, lightsalmon, lightskyblue);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container {
+    top: 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: stretch;
+  margin: 0 auto;
+}
+.container * {
+  flex-basis: 100%;
+}
+.row {
+  display: flex;
+  justify-items: stretch;
+  align-content: stretch;
+}
+.row * {
+  flex-grow: 1;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  background: #fff;
+  border: 3px solid #999;
+  border-radius: 10px;
+}
+.card:hover {
+    border: 3px solid gray;
+}
+.card:last-child {
+  margin-bottom: 0;
+}
+.new-todo-form {
+  padding: 0;
+  margin: 0 auto;
+}
+.new-todo-form .card input {
+  flex-grow: 1;
+  width: 0;
+  margin-right: 10px;
+  padding: 15px;
+  border: 3px solid gray;
+  font-size: 20px;
+  font-weight: 500;
+}
+.new-todo-form .card input:hover {
+    border: 3px solid #999;
+}
+.new-todo-form .card button {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 50px;
+  background-color: lightcoral;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.new-todo-form .card button:hover {
+    border-radius: 10px;
+    background: skyblue;
+}
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  align-items: stretch;
+}
+.todo-list-item {
+  width: 100%;
+}
+.todo-list-item p {
+  flex-grow: 1;
+  margin: 0 5px;
+  padding: 0;
+}
+.todo-list-item.completed p {
+  text-decoration: line-through;
+}
+.todo-list-item input, .todo-list-item button {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 10px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-list-item input {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.todo-list-item button {
+  border: none;
+  background: none;
+  font-size: 100%;
+  line-height: 100%;
+}
+.todo-list-item button:hover {
+  transform: scale(1.1);
+}
+.todo-list-item button:active,
+.todo-list-item button:focus {
+  transform: scale(0.9);
+  outline: none;
+}
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 700px;
+  }
+}
+@media (max-width: 600px) {
+    .new-todo-form .card input {
+        font-size: 10px;
+        font-weight: 300;
+    }
+}

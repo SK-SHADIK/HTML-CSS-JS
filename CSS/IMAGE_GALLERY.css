@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    transition: all 0.3s cubic-bezier(0.34, 1.12, 0.68, 1.31);
+}
+body {
+    background: #eee;
+}
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #00c6f0);
+    border-radius: 5px;    
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, tomato);
+}
+
+
+
+.container {
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+.container .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    list-style: none;
+}
+.container .navbar .nav {
+    height: 40px;
+    width: 140px;
+    background: #fff;
+    color: #666;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px;
+}
+.container .navbar .nav.active {
+    background: coral;
+    color: #fff;
+}
+.container .navbar .nav.active:hover {
+    background: #fff;
+    color: #666;
+}
+.container .navbar .nav:hover {
+    background: coral;
+    color: #fff;
+}
+.container .images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+.container .images .img {
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border: 15px solid #fff;
+    margin: 20px;
+}
+.container .images .img:hover {
+    border: 15px solid #000;
+}
+.container .images .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.container .images .img:hover img {
+    transform: scale(1.5);
+}

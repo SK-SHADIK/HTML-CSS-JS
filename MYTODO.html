@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/MYTODO.css">
+    <script src="https://kit.fontawesome.com/ec8ab4f226.js" crossorigin="anonymous"></script>
+    <title>TODO</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <form class="new-todo-form" id="new-todo-form" submit="newTodo()">
+            <div class="card">
+              <input type="text" name="new-todo-content" placeholder="Add A To Do..." />
+              <button type="submit" name="new-todo-submit">Add</button>
+            </div>
+          </form>
+        </div>
+        <div class="row">
+          <ul class="todo-list"></ul>
+        </div>
+    </div>
+    
+    <script src="JS/MYTODO.js"></script>
+</body>
+</html>

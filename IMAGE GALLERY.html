@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>IMAGE GALLERY</title>
+
+        <!--MAGNIFIC POPUP CSS CDN LINK-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+        
+        <link rel = "stylesheet" type = "text/css" href = "CSS/IMAGE_GALLERY_STYLE.css">
+        <link rel = "stylesheet" type = "text/css" href = "C:\Users\Shadik Hasan\Desktop\WEB PAGE\fontawesome-free-5.15.0-web\css/all.css">
+    
+    </head>
+    <body>
+        <div class="container">
+            <ul class="navbar">
+                <li class="nav active" data-filter="all">ALL</li>
+                <li class="nav" data-filter="nature">NATURE</li>
+                <li class="nav" data-filter="flower">FLOWER</li>
+                <li class="nav" data-filter="bird">BIRD</li>
+                <li class="nav" data-filter="butterfly">BUTTERFLY</li>
+                <li class="nav" data-filter="fish">FISH</li>
+            </ul>
+
+            <div class="images">
+                
+                <!--NATURE-->
+                <a href="IMG/N1.jpg" class="img nature"><img src="IMG/N1.jpg" alt=""></a>
+                <a href="IMG/N2.jpg" class="img nature"><img src="IMG/N2.jpg" alt=""></a>
+                <a href="IMG/N3.jpg" class="img nature"><img src="IMG/N3.jpg" alt=""></a>
+                <a href="IMG/N4.jpg" class="img nature"><img src="IMG/N4.jpg" alt=""></a>
+                <a href="IMG/N5.jpg" class="img nature"><img src="IMG/N5.jpg" alt=""></a>
+                <a href="IMG/N6.jpg" class="img nature"><img src="IMG/N6.jpg" alt=""></a>
+                <a href="IMG/N7.jpeg" class="img nature"><img src="IMG/N7.jpeg" alt=""></a>
+                <a href="IMG/N8.jpg" class="img nature"><img src="IMG/N8.jpg" alt=""></a>
+                <a href="IMG/N9.jpg" class="img nature"><img src="IMG/N9.jpg" alt=""></a>
+                <a href="IMG/N10.jpg" class="img nature"><img src="IMG/N10.jpg" alt=""></a>
+
+                <!--FLOWER-->
+                <a href="IMG/F1.jpg" class="img flower"><img src="IMG/F1.jpg" alt=""></a>
+                <a href="IMG/F2.jfif" class="img flower"><img src="IMG/F2.jfif" alt=""></a>
+                <a href="IMG/F3.jfif" class="img flower"><img src="IMG/F3.jfif" alt=""></a>
+                <a href="IMG/F4.jpg" class="img flower"><img src="IMG/F4.jpg" alt=""></a>
+                <a href="IMG/F5.jfif" class="img flower"><img src="IMG/F5.jfif" alt=""></a>
+
+                <!--BIRD-->
+                <a href="IMG/BI1.jpg" class="img bird"><img src="IMG/BI1.jpg" alt=""></a>
+                <a href="IMG/BI2.jpg" class="img bird"><img src="IMG/BI2.jpg" alt=""></a>
+                <a href="IMG/BI3.jpg" class="img bird"><img src="IMG/BI3.jpg" alt=""></a>
+                <a href="IMG/BI4.jpg" class="img bird"><img src="IMG/BI4.jpg" alt=""></a>
+                <a href="IMG/BI5.png" class="img bird"><img src="IMG/BI5.png" alt=""></a>
+                <a href="IMG/BI6.jpg" class="img bird"><img src="IMG/BI6.jpg" alt=""></a>
+                <a href="IMG/BI7.jpg" class="img bird"><img src="IMG/BI7.jpg" alt=""></a>
+                
+                <!--BUTTERFLY-->
+                <a href="IMG/B1.jpg" class="img butterfly"><img src="IMG/B1.jpg" alt=""></a>
+                <a href="IMG/B2.jpg" class="img butterfly"><img src="IMG/B2.jpg" alt=""></a>
+                <a href="IMG/B3.jpg" class="img butterfly"><img src="IMG/B3.jpg" alt=""></a>
+                
+                <!--FISH-->
+                <a href="IMG/FI1.jpg" class="img fish"><img src="IMG/FI1.jpg" alt=""></a>
+                <a href="IMG/FI2.jfif" class="img fish"><img src="IMG/FI2.jfif" alt=""></a>
+                <a href="IMG/FI3.jpg" class="img fish"><img src="IMG/FI3.jpg" alt=""></a>
+                <a href="IMG/FI4.jpg" class="img fish"><img src="IMG/FI4.jpg" alt=""></a>
+                <a href="IMG/FI5.jpg" class="img fish"><img src="IMG/FI5.jpg" alt=""></a>
+                
+            </div>
+            
+        </div>
+
+        <!--JQUERY CDN LINK-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!--MAGNIFIC POPUP JS CDN LINK-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+
+        <script>
+            $(document).ready(function(){
+                $('.nav').click(function(){
+                    $(this).addClass('active').siblings().removeClass('active');
+
+                    var filter = $(this).attr('data-filter')
+
+                    if (filter == 'all') {
+                        $('.img ').show(400);
+                    }else {
+                        $('.img ').not('.'+filter).hide(200);
+                        $('.img ').filter('.'+filter).show(400);
+                    }
+                });
+                $('.container').magnificPopup({
+                    delegate:'a',
+                    type:'image',
+                    gallery:{
+                        enabled: true
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
