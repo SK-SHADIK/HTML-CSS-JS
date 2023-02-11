@@ -4,6 +4,8 @@
 }
 body{
     background: linear-gradient(145deg, lightsalmon, lightskyblue);
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 #src-btn, .screenshoot{
     position: fixed;
